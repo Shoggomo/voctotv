@@ -8,7 +8,6 @@
 package de.justjanne.voctotv.mobile.route
 
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -21,12 +20,13 @@ import androidx.navigation3.ui.NavDisplay
 import de.justjanne.voctotv.common.viewmodel.ConferenceViewModel
 import de.justjanne.voctotv.common.viewmodel.HomeViewModel
 import de.justjanne.voctotv.common.viewmodel.PlayerLiveViewModel
-import de.justjanne.voctotv.common.viewmodel.PlayerViewModel
 import de.justjanne.voctotv.common.viewmodel.PlayerVodViewModel
+import de.justjanne.voctotv.common.viewmodel.SearchViewModel
 import de.justjanne.voctotv.mobile.Routes
 import de.justjanne.voctotv.mobile.route.conference.ConferenceRoute
 import de.justjanne.voctotv.mobile.route.home.HomeRoute
 import de.justjanne.voctotv.mobile.route.player.PlayerRoute
+import de.justjanne.voctotv.mobile.route.search.SearchRoute
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -65,8 +65,9 @@ fun AppRouter(startRoute: NavKey? = null) {
                         }
                     ConferenceRoute(viewModel, navigate, back)
                 }
-                entry<Routes.Lecture> { key ->
-                    Text("Lecture")
+                entry<Routes.Search> {
+                    val viewModel = hiltViewModel<SearchViewModel>()
+                    SearchRoute(viewModel, navigate, back)
                 }
                 entry<Routes.PlayerVod> { key ->
                     val viewModel =

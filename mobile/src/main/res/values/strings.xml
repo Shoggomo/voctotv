@@ -13,6 +13,7 @@
 
   <string name="placeholder_loading">Loading</string>
   <string name="placeholder_conference">Conference</string>
+  <string name="placeholder_search">Search…</string>
 
   <string name="action_watchnow">Watch now</string>
   <string name="action_back">Back</string>
@@ -20,6 +21,7 @@
   <string name="action_pause">Pause</string>
   <string name="action_play">Play</string>
   <string name="action_restart">Play Again</string>
+  <string name="action_search">Search</string>
   <string name="action_fullscreen_enter">Enter Fullscreen</string>
   <string name="action_fullscreen_exit">Exit Fullscreen</string>
 
@@ -33,4 +35,7 @@
   <string name="category_popular">Popular</string>
 
   <string name="video_info_views">Views</string>
+
+  <string name="search_results_placeholder">Enter a search term to start searching.</string>
+  <string name="search_results_notfound">No results found for %0$s</string>
 </resources>

@@ -40,6 +40,7 @@ interface LectureApi {
     @GET("public/events/search")
     suspend fun search(
         @Query("q") query: String,
+        @Query("page") page: Int = 1,
     ): LectureResult
 
     @Serializable

@@ -15,17 +15,12 @@ object Routes {
     data object Home : NavKey
 
     @Serializable
-    data object ConferenceList : NavKey
-
-    @Serializable
     data class Conference(
         val id: String,
     ) : NavKey
 
     @Serializable
-    data class Lecture(
-        val id: String,
-    ) : NavKey
+    data object Search : NavKey
 
     @Serializable
     data class PlayerVod(
