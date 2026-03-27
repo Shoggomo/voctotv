@@ -84,12 +84,11 @@ sealed interface LiveTalkModel {
     ) : LiveTalkModel
 
     object Serializer : JsonContentPolymorphicSerializer<LiveTalkModel>(LiveTalkModel::class) {
-        override fun selectDeserializer(element: JsonElement): KSerializer<out LiveTalkModel> {
-            return if ("special" in element.jsonObject) {
+        override fun selectDeserializer(element: JsonElement): KSerializer<out LiveTalkModel> =
+            if ("special" in element.jsonObject) {
                 Break.serializer()
             } else {
                 Talk.serializer()
             }
-        }
     }
 }

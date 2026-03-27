@@ -28,7 +28,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import de.justjanne.voctotv.common.util.formatTime
 import de.justjanne.voctotv.mobile.ui.theme.DescriptionAlpha
 import de.justjanne.voctotv.mobile.ui.theme.SubtitleAlpha
 import de.justjanne.voctotv.voctoweb.model.LiveRoomModel
