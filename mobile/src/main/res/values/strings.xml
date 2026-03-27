@@ -37,5 +37,5 @@
   <string name="video_info_views">Views</string>
 
   <string name="search_results_placeholder">Enter a search term to start searching.</string>
-  <string name="search_results_notfound">No results found for %0$s</string>
+  <string name="search_results_notfound">No results found for "%1$s"</string>
 </resources>

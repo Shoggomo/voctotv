@@ -136,6 +136,8 @@ dependencies {
 
     implementation(libs.androidx.material3)
 
+    implementation(libs.androidx.paging)
+
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.navigation3.runtime)
