@@ -19,7 +19,7 @@ import androidx.media3.ui.compose.SURFACE_TYPE_SURFACE_VIEW
 import de.justjanne.voctotv.common.player.UsePlayerState
 import de.justjanne.voctotv.common.subtitles.SubtitleDisplay
 import de.justjanne.voctotv.common.viewmodel.PlayerViewModel
-import de.justjanne.voctotv.mobile.util.AutoUnlockScreenOrientation
+import de.justjanne.voctotv.mobile.util.CustomRotationController
 
 @OptIn(UnstableApi::class)
 @Composable
@@ -31,7 +31,7 @@ fun PlayerRoute(
     val uiState = rememberPlayerUiState(viewModel.playerState)
 
     UsePlayerState(viewModel)
-    AutoUnlockScreenOrientation()
+    CustomRotationController()
     SystemUiController(uiState, viewModel.playerState.casting)
 
     Scaffold { contentPadding ->
