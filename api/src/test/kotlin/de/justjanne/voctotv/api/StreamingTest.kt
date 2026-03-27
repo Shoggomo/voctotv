@@ -17,8 +17,14 @@ import kotlin.test.Test
 @OptIn(ExperimentalSerializationApi::class)
 class StreamingTest {
     @Test
-    fun parseConferences() =
+    fun parseConferences1() =
         runTest {
-            println(Json.decodeFromStream<List<LiveConferenceModel>>(TestUtil.load("streaming.json")))
+            println(Json.decodeFromStream<List<LiveConferenceModel>>(TestUtil.load("streaming1.json")))
+        }
+
+    @Test
+    fun parseConferences2() =
+        runTest {
+            println(Json.decodeFromStream<List<LiveConferenceModel>>(TestUtil.load("streaming2.json")))
         }
 }
