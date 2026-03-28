@@ -20,10 +20,11 @@ internal class CustomRotationListener(
     @SuppressLint("SourceLockedOrientationActivity")
     override fun onScreenOrientationChanged(orientation: Int) {
         job?.cancel()
-        job = scope.launch {
-            delay(500.milliseconds)
-            autoUnlockRotation()
-        }
+        job =
+            scope.launch {
+                delay(500.milliseconds)
+                autoUnlockRotation()
+            }
     }
 
     override fun disable() {

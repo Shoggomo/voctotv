@@ -1,7 +1,6 @@
 package de.justjanne.voctotv.mobile.util
 
 import android.content.Context
-import android.content.res.Configuration
 import android.view.OrientationEventListener
 import android.view.Surface
 
