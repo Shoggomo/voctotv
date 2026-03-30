@@ -32,7 +32,7 @@ fun PlayerRoute(
 
     UsePlayerState(viewModel)
     CustomRotationController()
-    SystemUiController(uiState, viewModel.playerState.casting)
+    SystemUiController(viewModel.playerState, uiState)
 
     Scaffold { contentPadding ->
         PlayerUi(
